@@ -13,10 +13,10 @@ namespace UrlCombineLib
         /// <returns>The merged url</returns>
         public static string Combine(string baseUrl, string relativeUrl)
         {
-            if (string.IsNullOrWhiteSpace(baseUrl))
+            if (string.IsNullOrEmpty(baseUrl?.Trim() ?? null))
                 throw new ArgumentNullException(nameof(baseUrl));
 
-            if (string.IsNullOrWhiteSpace(relativeUrl))
+            if (string.IsNullOrEmpty(relativeUrl?.Trim() ?? null))
                 return baseUrl;
 
             baseUrl = baseUrl.TrimEnd('/');
@@ -33,7 +33,7 @@ namespace UrlCombineLib
         /// <returns>The merged url</returns>
         public static string Combine(string baseUrl, params string[] relativePaths)
         {
-            if (string.IsNullOrWhiteSpace(baseUrl))
+            if (string.IsNullOrEmpty(baseUrl?.Trim() ?? null))
                 throw new ArgumentNullException(nameof(baseUrl));
 
             if (relativePaths.Length == 0)

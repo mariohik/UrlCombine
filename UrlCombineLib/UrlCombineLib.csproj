@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0</TargetFrameworks>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <PackageId>UrlCombine</PackageId>
     <PackageVersion>2.0.0</PackageVersion>
     <Authors>Jean Lourenço</Authors>
